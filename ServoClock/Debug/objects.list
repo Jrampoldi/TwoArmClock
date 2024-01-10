@@ -1,0 +1,6 @@
+"./Src/coordinate_handler.o"
+"./Src/main.o"
+"./Src/pwm_handler.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f411ceux.o"
