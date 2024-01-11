@@ -9,7 +9,7 @@
 /*TIM3 DEFINITIONS*/
 #define TIM3EN				(1U<<1)
 #define DIER_UIE			(1U<<0)
-#define CR_CEN				(1U<<0)
+#define CR1_CEN				(1U<<0)
 
 void tim3_1hz_init(void){
 	/* Configure TIM3 interrupt at 1hz */
@@ -29,5 +29,5 @@ void tim3_1hz_init(void){
 	NVIC_EnableIRQ(TIM3_IRQn);
 
 	/* Start Clock */
-	TIM3->CR |= CR_CEN;
+	TIM3->CR1 |= CR_CEN;
 }
