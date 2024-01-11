@@ -9,29 +9,32 @@
 //pins A1-A3 config to ch 2, 3, & 4
 
 /*GPIO DEFINITIONS*/
-#define GPIOAEN					(1U<<0)
+#define GPIOAEN				(1U<<0)
 #define MODER_PIN_1_AF			(1U<<3)
 #define MODER_PIN_2_AF			(1U<<5)
 #define MODER_PIN_3_AF			(1U<<7)
-#define AFR_PIN_1				(1U<<4)
-#define AFR_PIN_2				(1U<<8)
-#define AFR_PIN_3				(1U<<12)
+#define AFR_PIN_1			(1U<<4)
+#define AFR_PIN_2			(1U<<8)
+#define AFR_PIN_3			(1U<<12)
 #define PIN1_HIGHSPEED			(1U<<3 | 1U<<2)
 #define PIN2_HIGHSPEED			(1U<<5 | 1U<<4)
 #define PIN3_HIGHSPEED			(1U<<7 | 1U<<6)
 
 /*TIM2 DEFINITIONS*/
-#define TIM2EN					(1U<<0)
-#define CR1_CEN					(1U<<0)
-#define CCER_CC2E				(1U<<4)
-#define CCER_CC3E				(1U<<8)
-#define CCER_CC4E				(1U<<12)
-#define PSC_VALUE				(320 - 1)
-#define ARR_VALUE				(1000 - 1)
+#define TIM2EN				(1U<<0)
+#define CR1_CEN				(1U<<0)
+#define CCER_CC2E			(1U<<4)
+#define CCER_CC3E			(1U<<8)
+#define CCER_CC4E			(1U<<12)
+#define PSC_VALUE			(320 - 1)
+#define ARR_VALUE			(1000 - 1)
 #define CH2_PWM_MODE_ONE		(1U<<14 | 1U<<13)
 #define CH3_PWM_MODE_ONE		(1U<<6 | 1U<<5)
 #define CH4_PWM_MODE_ONE		(1U<<14 | 1U<<13)
 
+/* Servo specific definitions */
+#define MAX_SERVO_VALUE			100
+#define MIN_SERVO_VALUE			50
 void pwm_tim2_init(void){
 
 
@@ -67,4 +70,10 @@ void pwm_tim2_init(void){
 	TIM2->CCER |= (CCER_CC4E | CCER_CC3E | CCER_CC2E); //enable capture/compare of tim2ch2
 	TIM2->CR1 |= CR1_CEN;
 
+}
+
+double map_to_servo(double min_range, double max_range, double value){
+	scale = (min_range - MIN_SERVO_VALUE)/(max_range - min_range);
+	offset = -min_range *(MAX_SERVO_VALUE - MIN_SERVO_VALUE)/(max-range - min_range);
+	return (value*scale + offset); //return mapped value
 }
