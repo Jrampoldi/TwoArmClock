@@ -15,8 +15,7 @@ int main(){
 	tim3_1hz_init();
 
 	while(1){
-		//check if seconds == 60
-		//update clock
+		
 	}
 }
 
