@@ -77,3 +77,8 @@ double map_to_servo(double min_range, double max_range, double value){
 	return (double)(MIN_SERVO_VALUE + slope * (value - min_range));
 
 }
+void move_servo(double base_degrees, double arm_degrees, double x_value){
+	//write algo to change CCR values using 
+	//the mapped values given and the x
+	//value for left arm or right arm servo
+}
