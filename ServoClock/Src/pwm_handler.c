@@ -73,7 +73,7 @@ void pwm_tim2_init(void){
 }
 
 double map_to_servo(double min_range, double max_range, double value){
-	scale = (min_range - MIN_SERVO_VALUE)/(max_range - min_range);
-	offset = -min_range *(MAX_SERVO_VALUE - MIN_SERVO_VALUE)/(max-range - min_range);
+	double scale = (min_range - MIN_SERVO_VALUE)/(max_range - min_range);
+	double offset = -min_range *(MAX_SERVO_VALUE - MIN_SERVO_VALUE)/(max_range - min_range);
 	return (value*scale + offset); //return mapped value
 }
