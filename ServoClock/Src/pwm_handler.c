@@ -35,6 +35,9 @@
 /* Servo specific definitions */
 #define MAX_SERVO_VALUE			100
 #define MIN_SERVO_VALUE			50
+#define MAX_DEGREE_RANGE		180
+#define MIN_DEGREE_RANGE		0
+
 void pwm_tim2_init(void){
 
 
@@ -72,9 +75,9 @@ void pwm_tim2_init(void){
 
 }
 
-double map_to_servo(double min_range, double max_range, double value){
-	double slope = 1.0 * (MAX_SERVO_VALUE - MIN_SERVO_VALUE) / (max_range - min_range);
-	return (double)(MIN_SERVO_VALUE + slope * (value - min_range));
+double map_to_servo(double value){
+	double slope = 1.0 * (MAX_SERVO_VALUE - MIN_SERVO_VALUE) / (MAX_DEGREE_RANGE - MIN_DEGREE_RANGE);
+	return (double)(MIN_SERVO_VALUE + slope * (value - MIN_DEGREE_RANGE));
 
 }
 void move_servo(double base_degrees, double arm_degrees, double x_value){
