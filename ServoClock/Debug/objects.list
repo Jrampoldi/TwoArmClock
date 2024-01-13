@@ -3,4 +3,5 @@
 "./Src/pwm_handler.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
+"./Src/tim_handler.o"
 "./Startup/startup_stm32f411ceux.o"

@@ -29,5 +29,5 @@ void tim3_1hz_init(void){
 	NVIC_EnableIRQ(TIM3_IRQn);
 
 	/* Start Clock */
-	TIM3->CR1 |= CR_CEN;
+	TIM3->CR1 |= CR1_CEN;
 }

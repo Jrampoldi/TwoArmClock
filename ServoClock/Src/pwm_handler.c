@@ -37,9 +37,6 @@
 #define MIN_SERVO_VALUE			50
 #define MAX_DEGREE_RANGE		180
 #define MIN_DEGREE_RANGE		0
-#define BASE_SERVO			(uint32_t)(TIM2->CCR2)
-#define RIGHT_ARM_SERVO			(uint32_t)(TIM2->CCR3)
-#define LEFT_ARM_SERVO			(uint32_t)(TIM2->CCR4)
 
 void pwm_tim2_init(void){
 
@@ -88,13 +85,13 @@ void move_servo(double base_degrees, double arm_degrees, double x_value){
 	//the mapped values given and the x
 	//value for left arm or right arm servo
 
-	BASE_SERVO = base_degrees;
+	TIM2->CCR2 = base_degrees;
 	
-	if (x >= 0){
+	if (x_value >= 0){
 		//use left servo
-		LEFT_ARM_SERVO = arm_degrees;
+		TIM2->CCR3 = arm_degrees;
 	} else {
 		//use right servo
-		RIGHT_ARM_SERVO = arm_degrees;
+		TIM2->CCR4 = arm_degrees;
 	}
 }

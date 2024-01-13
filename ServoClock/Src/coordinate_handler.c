@@ -1,10 +1,6 @@
 #include "coordinate_handler.h"
 
 
-// coordinate file 
-// notes: must include math.h and 
-//	pwm_handler.h
-
 /* Defined value */ 
 #define SIDE_SIZE			5
 
@@ -34,7 +30,7 @@ void move_arm(double x, double y){
 
 void coordinate_to_rad(double x, double y){
 	//write algo according to planning
-	double sidei = (sqrt(pow(x, 2) + pow(y, 2));	
+	double sidei = sqrt(pow(x, 2) + pow(y, 2));	
 
 	arm_radians = 2.0 * asin(sidei / (2.0 * SIDE_SIZE));
 	base_radians = 180.0 - (atan(y / x) + acos( sidei / (2.0 * SIDE_SIZE)));

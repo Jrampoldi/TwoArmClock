@@ -16,8 +16,8 @@ void pwm_tim2_init(void);
 // channel 2, 3, & 4, which are configured to pins 
 // 1, 2, & 3.
 
-double map_to_servo(double min_range, double max_range, double value);
-// Description: Takes min_range, max_range, and a value, then returns mapped value
+double map_to_servo(double value);
+// Description: Takes a value then returns mapped value
 // to relative servo range. Servo range definitions in pwm_handler.c.
 
 void move_servo(double base_degrees, double arm_degrees, double x_value);

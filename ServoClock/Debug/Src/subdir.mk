@@ -9,21 +9,24 @@ C_SRCS += \
 ../Src/main.c \
 ../Src/pwm_handler.c \
 ../Src/syscalls.c \
-../Src/sysmem.c 
+../Src/sysmem.c \
+../Src/tim_handler.c 
 
 OBJS += \
 ./Src/coordinate_handler.o \
 ./Src/main.o \
 ./Src/pwm_handler.o \
 ./Src/syscalls.o \
-./Src/sysmem.o 
+./Src/sysmem.o \
+./Src/tim_handler.o 
 
 C_DEPS += \
 ./Src/coordinate_handler.d \
 ./Src/main.d \
 ./Src/pwm_handler.d \
 ./Src/syscalls.d \
-./Src/sysmem.d 
+./Src/sysmem.d \
+./Src/tim_handler.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +36,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/coordinate_handler.cyclo ./Src/coordinate_handler.d ./Src/coordinate_handler.o ./Src/coordinate_handler.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/pwm_handler.cyclo ./Src/pwm_handler.d ./Src/pwm_handler.o ./Src/pwm_handler.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/coordinate_handler.cyclo ./Src/coordinate_handler.d ./Src/coordinate_handler.o ./Src/coordinate_handler.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/pwm_handler.cyclo ./Src/pwm_handler.d ./Src/pwm_handler.o ./Src/pwm_handler.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/tim_handler.cyclo ./Src/tim_handler.d ./Src/tim_handler.o ./Src/tim_handler.su
 
 .PHONY: clean-Src
 

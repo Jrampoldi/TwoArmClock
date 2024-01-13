@@ -9,6 +9,7 @@
 #define COORDINATE_HANDLER_H_
 
 /* include headers */
+#include <stdlib.h>
 #include <math.h>
 #include "pwm_handler.h"
 
