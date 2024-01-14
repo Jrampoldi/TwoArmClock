@@ -1,0 +1,23 @@
+16:27:39 **** Build of configuration Debug for project ServoClock ****
+make -j7 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411ceux.d" -MT"Startup/startup_stm32f411ceux.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411ceux.o" "../Startup/startup_stm32f411ceux.s"
+arm-none-eabi-gcc "../Src/coordinate_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/coordinate_handler.d" -MT"Src/coordinate_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/coordinate_handler.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/pwm_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/pwm_handler.d" -MT"Src/pwm_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/pwm_handler.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/tim_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tim_handler.d" -MT"Src/tim_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/tim_handler.o"
+arm-none-eabi-gcc -o "ServoClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/jourdanrampoldi/workspace/TwoArmClock/ServoClock/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ServoClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ServoClock.elf
+ 
+arm-none-eabi-size   ServoClock.elf 
+arm-none-eabi-objdump -h -S  ServoClock.elf  > "ServoClock.list"
+   text	   data	    bss	    dec	    hex	filename
+   1144	      8	   1568	   2720	    aa0	ServoClock.elf
+Finished building: default.size.stdout
+Finished building: ServoClock.list
+ 
+ 
+
+16:27:39 Build Finished. 0 errors, 0 warnings. (took 559ms)
+
