@@ -1,10 +1,10 @@
 #include "stm32f411xe.h"
+#include "tim_driver.h"
 #include "pwm_handler.h"
-#include "tim_handler.h"
 #include "coordinate_handler.h"
 #include "UART_handler.h"
 #include "time_handler.h"
-#include "plot_value.h"
+#include "plot_values.h"
 
 
 /* Function Declarations */
@@ -32,6 +32,7 @@ void tim3_callback(){
     seconds++;
     if (seconds >= 60){
         //update clock
+    	update_clock();
         seconds = 0;
     }
 }

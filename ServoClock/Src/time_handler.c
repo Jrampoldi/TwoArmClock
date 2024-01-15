@@ -1,6 +1,12 @@
-#include "tim_handler.h"
+#include "time_handler.h"
 
+/* Function Declarations */
+void update_time(int h, int m);
+// Description: will call draw functions
+// for all four digits and pass the value
+// of hour and min appropriatetly.
 
+/* Global Variables */
 volatile int min = 0;
 volatile int hr = 0;
 
@@ -9,12 +15,12 @@ void update_clock(){
     min++;
     if (min >= 60){
         min = 0;
-        hour++;
+        hr++;
     }
-    if (hour >= 24){
-        hour = 0;
+    if (hr >= 24){
+        hr = 0;
     }
-    udpate_time(hr, min);
+    update_time(hr, min);
 }
 
 void update_time(int h, int m){

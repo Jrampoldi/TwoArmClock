@@ -8,28 +8,34 @@ C_SRCS += \
 ../Src/UART_handler.c \
 ../Src/coordinate_handler.c \
 ../Src/main.c \
+../Src/plot_values.c \
 ../Src/pwm_handler.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
-../Src/tim_handler.c 
+../Src/tim_driver.c \
+../Src/time_handler.c 
 
 OBJS += \
 ./Src/UART_handler.o \
 ./Src/coordinate_handler.o \
 ./Src/main.o \
+./Src/plot_values.o \
 ./Src/pwm_handler.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
-./Src/tim_handler.o 
+./Src/tim_driver.o \
+./Src/time_handler.o 
 
 C_DEPS += \
 ./Src/UART_handler.d \
 ./Src/coordinate_handler.d \
 ./Src/main.d \
+./Src/plot_values.d \
 ./Src/pwm_handler.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
-./Src/tim_handler.d 
+./Src/tim_driver.d \
+./Src/time_handler.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -39,7 +45,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/UART_handler.cyclo ./Src/UART_handler.d ./Src/UART_handler.o ./Src/UART_handler.su ./Src/coordinate_handler.cyclo ./Src/coordinate_handler.d ./Src/coordinate_handler.o ./Src/coordinate_handler.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/pwm_handler.cyclo ./Src/pwm_handler.d ./Src/pwm_handler.o ./Src/pwm_handler.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/tim_handler.cyclo ./Src/tim_handler.d ./Src/tim_handler.o ./Src/tim_handler.su
+	-$(RM) ./Src/UART_handler.cyclo ./Src/UART_handler.d ./Src/UART_handler.o ./Src/UART_handler.su ./Src/coordinate_handler.cyclo ./Src/coordinate_handler.d ./Src/coordinate_handler.o ./Src/coordinate_handler.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/plot_values.cyclo ./Src/plot_values.d ./Src/plot_values.o ./Src/plot_values.su ./Src/pwm_handler.cyclo ./Src/pwm_handler.d ./Src/pwm_handler.o ./Src/pwm_handler.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/tim_driver.cyclo ./Src/tim_driver.d ./Src/tim_driver.o ./Src/tim_driver.su ./Src/time_handler.cyclo ./Src/time_handler.d ./Src/time_handler.o ./Src/time_handler.su
 
 .PHONY: clean-Src
 

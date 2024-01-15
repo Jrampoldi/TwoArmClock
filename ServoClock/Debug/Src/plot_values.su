@@ -1,0 +1,14 @@
+../Src/plot_values.c:6:6:draw_colon	4	static
+../Src/plot_values.c:11:6:draw_D1	16	static
+../Src/plot_values.c:14:6:draw_D2	16	static
+../Src/plot_values.c:17:6:draw_D3	16	static
+../Src/plot_values.c:20:6:draw_D4	16	static
+../Src/plot_values.c:24:6:draw_one	16	static
+../Src/plot_values.c:27:6:draw_two	16	static
+../Src/plot_values.c:30:6:draw_three	16	static
+../Src/plot_values.c:33:6:draw_four	16	static
+../Src/plot_values.c:36:6:draw_five	16	static
+../Src/plot_values.c:39:6:draw_six	16	static
+../Src/plot_values.c:42:6:draw_seven	16	static
+../Src/plot_values.c:45:6:draw_eight	16	static
+../Src/plot_values.c:48:6:draw_nine	16	static

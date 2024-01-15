@@ -21,31 +21,31 @@ void draw_D4(int digit){
     // x offset = 7
 }
 
-void draw_one(int offset_x, int offset_y){
+void draw_one(int offset_x){
     //one with offsetx and offsety
 }
-void draw_two(int offset_x, int offset_y){
+void draw_two(int offset_x){
     //two with offsetx and offsety
 }
-void draw_three(int offset_x, int offset_y){
+void draw_three(int offset_x){
     //three with offsetx and offsety
 }
-void draw_four(int offset_x, int offset_y){
+void draw_four(int offset_x){
     //four with offsetx and offsety
 }
-void draw_five(int offset_x, int offset_y){
+void draw_five(int offset_x){
     //five with offsetx and offsety
 }
-void draw_six(int offset_x, int offset_y){
+void draw_six(int offset_x){
     //six with offsetx and offsety
 }
-void draw_seven(int offset_x, int offset_y){
+void draw_seven(int offset_x){
     //seven with offsetx and offsety
 }
-void draw_eight(int offset_x, int offset_y){
+void draw_eight(int offset_x){
     //eight with offsetx and offsety
 }
-void draw_nine(int offset_x, int offset_y){
+void draw_nine(int offset_x){
     //nine with offsetx and offsety
 }
 
