@@ -51,6 +51,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 ServoClock.list \
 
+OBJCOPY_BIN += \
+ServoClock.bin \
+
 
 # All Target
 all: main-build
@@ -74,12 +77,17 @@ ServoClock.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+ServoClock.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "ServoClock.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) ServoClock.elf ServoClock.list ServoClock.map default.size.stdout
+	-$(RM) ServoClock.bin ServoClock.elf ServoClock.list ServoClock.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

@@ -1,3 +1,4 @@
+"./Src/UART_handler.o"
 "./Src/coordinate_handler.o"
 "./Src/main.o"
 "./Src/pwm_handler.o"

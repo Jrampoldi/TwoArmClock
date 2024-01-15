@@ -1,0 +1,4 @@
+../Src/UART_handler.c:29:6:uart_tx_init	1
+../Src/UART_handler.c:45:5:__io_putchar	1
+../Src/UART_handler.c:51:6:uart_set_brr	1
+../Src/UART_handler.c:56:6:uart_write	2
