@@ -3,6 +3,9 @@
 #include "tim_handler.h"
 #include "coordinate_handler.h"
 #include "UART_handler.h"
+#include "time_handler.h"
+#include "plot_value.h"
+
 
 /* Function Declarations */
 void SystemInit(void);
@@ -10,6 +13,7 @@ void tim3_callback();
 
 /* Global variables */
 volatile int seconds = 0;
+
 
 int main(){
 	/* Initialization functions */
@@ -25,6 +29,11 @@ int main(){
 }
 
 void tim3_callback(){
+    seconds++;
+    if (seconds >= 60){
+        //update clock
+        seconds = 0;
+    }
 }
 
 void TIM3_IRQHandler(){
