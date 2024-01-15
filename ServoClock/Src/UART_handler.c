@@ -1,4 +1,4 @@
-#include UART_handler.h
+#include "UART_handler.h"
 
 /* Frequency Definitions */
 #define SYS_FREQ                16000000
@@ -42,7 +42,7 @@ void uart_tx_init(){
     USART1->CR1 |= CR1_UE;
 }
 
-int __io_putchar(){
+int __io_putchar(int ch){
     /* Overwrite printf for debug */
     uart_write(ch); // send char through tx
     return ch;

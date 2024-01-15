@@ -24,7 +24,7 @@
 
 .syntax unified
 .cpu cortex-m4
-.fpu softvfp
+.fpu fpv4-sp-d16
 .thumb
 
 .global g_pfnVectors
@@ -58,6 +58,7 @@ Reset_Handler:
   ldr   r0, =_estack
   mov   sp, r0          /* set stack pointer */
 /* Call the clock system initialization function.*/
+
   bl  SystemInit
 
 /* Copy the data segment initializers from flash to SRAM */

@@ -1,0 +1,36 @@
+#include "stm32f411xe.h"
+#include "pwm_handler.h"
+#include "tim_handler.h"
+#include "coordinate_handler.h"
+#include "UART_handler.h"
+
+/* Function Declarations */
+void tim3_callback();
+
+/* Global variables */
+volatile int seconds = 0;
+
+int main(){
+	/* Initialization functions */
+	uart_tx_init();
+	move_arm(1.0, 1.0);
+	pwm_tim2_init();
+	tim3_1hz_init();
+
+	while(1){
+		printf("Passed\n");
+	}
+
+}
+
+void tim3_callback(){
+}
+
+void TIM3_IRQHandler(){
+	//interrupt pending
+	if (TIM3->SR & SR_UIF){
+		// reset interrupt flag
+		TIM3->SR &= ~(SR_UIF);
+		tim3_callback();
+	}
+}

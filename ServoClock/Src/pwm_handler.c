@@ -33,10 +33,10 @@
 #define CH4_PWM_MODE_ONE		(1U<<14 | 1U<<13)
 
 /* Servo specific definitions */
-#define MAX_SERVO_VALUE			100
-#define MIN_SERVO_VALUE			50
-#define MAX_DEGREE_RANGE		180
-#define MIN_DEGREE_RANGE		0
+#define MAX_SERVO_VALUE			100.0
+#define MIN_SERVO_VALUE			50.0
+#define MAX_DEGREE_RANGE		180.0
+#define MIN_DEGREE_RANGE		0.0
 
 void pwm_tim2_init(void){
 
@@ -75,13 +75,12 @@ void pwm_tim2_init(void){
 
 }
 
-double map_to_servo(double value){
-	double slope = 1.0 * (MAX_SERVO_VALUE - MIN_SERVO_VALUE) / (MAX_DEGREE_RANGE - MIN_DEGREE_RANGE);
-	return (double)(MIN_SERVO_VALUE + slope * (value - MIN_DEGREE_RANGE));
+float map_to_servo(float value){
+	float slope = 1.0 * (MAX_SERVO_VALUE - MIN_SERVO_VALUE) / (MAX_DEGREE_RANGE - MIN_DEGREE_RANGE);
+	return (float)(MIN_SERVO_VALUE + slope * (value - MIN_DEGREE_RANGE));
 
 }
-void move_servo(double base_degrees, double arm_degrees, double x_value){
-
+void move_servo(float base_degrees, float arm_degrees, float x_value){
 
 	TIM2->CCR2 = base_degrees;
 	
@@ -92,4 +91,5 @@ void move_servo(double base_degrees, double arm_degrees, double x_value){
 		//use right servo
 		TIM2->CCR4 = arm_degrees;
 	}
+
 }

@@ -9,6 +9,7 @@
 #define PWM_HANDLER_H_
 
 #include "stm32f411xe.h"
+#include "uart_handler.h"
 
 /* Function Declarations*/
 void pwm_tim2_init(void);
@@ -16,11 +17,11 @@ void pwm_tim2_init(void);
 // channel 2, 3, & 4, which are configured to pins 
 // 1, 2, & 3.
 
-double map_to_servo(double value);
+float map_to_servo(float value);
 // Description: Takes a value then returns mapped value
 // to relative servo range. Servo range definitions in pwm_handler.c.
 
-void move_servo(double base_degrees, double arm_degrees, double x_value);
+void move_servo(float base_degrees, float arm_degrees, float x_value);
 // Description: Takes mapped values for base_degrees and arm_degrees, along with 
 // the x-value for deciding right-arm servo motor or left-arm servo  motor.
 // Will change values of CCR accordingly.
