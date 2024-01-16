@@ -12,7 +12,7 @@ Firmware Programming:
   time. The servos are attached to two, 5 inch, arms which will be responsible
   for drawing the current time. 
 
-Algorithm Programming:
+Code Logic:
     The program will keep track of a coordinate system. Degrees of the arms needed
   to achieve the (x, y) request will be calculated using the following formulas:
   
@@ -21,7 +21,14 @@ Algorithm Programming:
 
   The degrees calculated will be mapped to the range of the duty cycle and sent to
   the servos. Images in the folder "Planning" will explain the formula process and
-  will show general flow charts of the program.
+  will show general flow charts of the program. 
+      All digits will be drawn in a 3 by 5 inch area that falls in the curve
+            
+            y = sqrt(100 - pow(x, 2));
+
+  which provides a half circle, radius = 10 inch. Each digit will have an array that 
+  will hold points to draw the number, which will be added with the specific offset,
+  (offset_x, offset_y), depending on which digit in the time needs to be drawn.
 
 
   More Details Pending...
