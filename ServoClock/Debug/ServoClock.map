@@ -335,6 +335,26 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Src/plot_values.o
  .data          0x0000000000000000        0x0 ./Src/plot_values.o
  .bss           0x0000000000000000        0x0 ./Src/plot_values.o
+ .data.zero_array
+                0x0000000000000000       0x50 ./Src/plot_values.o
+ .data.one_array
+                0x0000000000000000       0x50 ./Src/plot_values.o
+ .data.two_array
+                0x0000000000000000       0x60 ./Src/plot_values.o
+ .data.three_array
+                0x0000000000000000       0x68 ./Src/plot_values.o
+ .data.four_array
+                0x0000000000000000       0x50 ./Src/plot_values.o
+ .data.five_array
+                0x0000000000000000       0x60 ./Src/plot_values.o
+ .data.six_array
+                0x0000000000000000       0x70 ./Src/plot_values.o
+ .data.seven_array
+                0x0000000000000000       0x30 ./Src/plot_values.o
+ .data.eight_array
+                0x0000000000000000       0x88 ./Src/plot_values.o
+ .data.nine_array
+                0x0000000000000000       0x70 ./Src/plot_values.o
  .text.draw_colon
                 0x0000000000000000        0xe ./Src/plot_values.o
  .text.draw_one
@@ -1578,25 +1598,25 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .comment       0x0000000000000043       0x44 ./Src/tim_driver.o
  .comment       0x0000000000000043       0x44 ./Src/time_handler.o
 
-.debug_info     0x0000000000000000     0x1966
+.debug_info     0x0000000000000000     0x1a8a
  .debug_info    0x0000000000000000      0x3fc ./Src/UART_handler.o
  .debug_info    0x00000000000003fc      0x209 ./Src/coordinate_handler.o
  .debug_info    0x0000000000000605      0x453 ./Src/main.o
- .debug_info    0x0000000000000a58      0x266 ./Src/plot_values.o
- .debug_info    0x0000000000000cbe      0x484 ./Src/pwm_handler.o
- .debug_info    0x0000000000001142      0x6d1 ./Src/tim_driver.o
- .debug_info    0x0000000000001813      0x130 ./Src/time_handler.o
- .debug_info    0x0000000000001943       0x23 ./Startup/startup_stm32f411ceux.o
+ .debug_info    0x0000000000000a58      0x38a ./Src/plot_values.o
+ .debug_info    0x0000000000000de2      0x484 ./Src/pwm_handler.o
+ .debug_info    0x0000000000001266      0x6d1 ./Src/tim_driver.o
+ .debug_info    0x0000000000001937      0x130 ./Src/time_handler.o
+ .debug_info    0x0000000000001a67       0x23 ./Startup/startup_stm32f411ceux.o
 
-.debug_abbrev   0x0000000000000000      0x6e6
+.debug_abbrev   0x0000000000000000      0x70d
  .debug_abbrev  0x0000000000000000      0x123 ./Src/UART_handler.o
  .debug_abbrev  0x0000000000000123      0x106 ./Src/coordinate_handler.o
  .debug_abbrev  0x0000000000000229      0x144 ./Src/main.o
- .debug_abbrev  0x000000000000036d       0x72 ./Src/plot_values.o
- .debug_abbrev  0x00000000000003df      0x110 ./Src/pwm_handler.o
- .debug_abbrev  0x00000000000004ef      0x13a ./Src/tim_driver.o
- .debug_abbrev  0x0000000000000629       0xab ./Src/time_handler.o
- .debug_abbrev  0x00000000000006d4       0x12 ./Startup/startup_stm32f411ceux.o
+ .debug_abbrev  0x000000000000036d       0x99 ./Src/plot_values.o
+ .debug_abbrev  0x0000000000000406      0x110 ./Src/pwm_handler.o
+ .debug_abbrev  0x0000000000000516      0x13a ./Src/tim_driver.o
+ .debug_abbrev  0x0000000000000650       0xab ./Src/time_handler.o
+ .debug_abbrev  0x00000000000006fb       0x12 ./Startup/startup_stm32f411ceux.o
 
 .debug_aranges  0x0000000000000000      0x1d0
  .debug_aranges
@@ -1691,32 +1711,32 @@ LOAD /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.id
  .debug_macro   0x000000000000f519       0xe1 ./Src/tim_driver.o
  .debug_macro   0x000000000000f5fa      0x203 ./Src/time_handler.o
 
-.debug_line     0x0000000000000000     0x2e5b
+.debug_line     0x0000000000000000     0x2e67
  .debug_line    0x0000000000000000      0x68c ./Src/UART_handler.o
  .debug_line    0x000000000000068c      0x6c1 ./Src/coordinate_handler.o
  .debug_line    0x0000000000000d4d      0x6f7 ./Src/main.o
- .debug_line    0x0000000000001444      0x765 ./Src/plot_values.o
- .debug_line    0x0000000000001ba9      0x69a ./Src/pwm_handler.o
- .debug_line    0x0000000000002243      0x4e1 ./Src/tim_driver.o
- .debug_line    0x0000000000002724      0x6bc ./Src/time_handler.o
- .debug_line    0x0000000000002de0       0x7b ./Startup/startup_stm32f411ceux.o
+ .debug_line    0x0000000000001444      0x771 ./Src/plot_values.o
+ .debug_line    0x0000000000001bb5      0x69a ./Src/pwm_handler.o
+ .debug_line    0x000000000000224f      0x4e1 ./Src/tim_driver.o
+ .debug_line    0x0000000000002730      0x6bc ./Src/time_handler.o
+ .debug_line    0x0000000000002dec       0x7b ./Startup/startup_stm32f411ceux.o
 
-.debug_str      0x0000000000000000    0x540d1
+.debug_str      0x0000000000000000    0x5413f
  .debug_str     0x0000000000000000    0x52e68 ./Src/UART_handler.o
                                       0x5306c (size before relaxing)
  .debug_str     0x0000000000052e68      0x9cd ./Src/coordinate_handler.o
                                       0x537c9 (size before relaxing)
  .debug_str     0x0000000000053835      0x14f ./Src/main.o
                                       0x5389e (size before relaxing)
- .debug_str     0x0000000000053984       0xb4 ./Src/plot_values.o
-                                      0x537d7 (size before relaxing)
- .debug_str     0x0000000000053a38      0x239 ./Src/pwm_handler.o
+ .debug_str     0x0000000000053984      0x122 ./Src/plot_values.o
+                                      0x53845 (size before relaxing)
+ .debug_str     0x0000000000053aa6      0x239 ./Src/pwm_handler.o
                                       0x5322c (size before relaxing)
- .debug_str     0x0000000000053c71      0x40f ./Src/tim_driver.o
+ .debug_str     0x0000000000053cdf      0x40f ./Src/tim_driver.o
                                       0x4f951 (size before relaxing)
- .debug_str     0x0000000000054080       0x22 ./Src/time_handler.o
+ .debug_str     0x00000000000540ee       0x22 ./Src/time_handler.o
                                       0x53783 (size before relaxing)
- .debug_str     0x00000000000540a2       0x2f ./Startup/startup_stm32f411ceux.o
+ .debug_str     0x0000000000054110       0x2f ./Startup/startup_stm32f411ceux.o
                                          0x6d (size before relaxing)
 
 .debug_frame    0x0000000000000000      0xd28
