@@ -37,6 +37,12 @@
 #define MIN_SERVO_VALUE			50.0
 #define MAX_DEGREE_RANGE		180.0
 #define MIN_DEGREE_RANGE		0.0
+#define INCREMENT_VALUE			5
+
+/* Global variables */
+volatile int base_servo_value = 0;
+volatile int rarm_servo_value = 0;
+volatile int larm_servo_value = 0;
 
 void pwm_tim2_init(void){
 
@@ -82,14 +88,36 @@ float map_to_servo(float value){
 }
 void move_servo(float base_degrees, float arm_degrees, float x_value){
 
-	TIM2->CCR2 = base_degrees;
+	base_servo_value = (int)base_degrees;
 	
 	if (x_value >= 0){
-		//use left servo
-		TIM2->CCR3 = arm_degrees;
+		// use left servo
+		larm_servo_value = (int)arm_degrees;
 	} else {
-		//use right servo
-		TIM2->CCR4 = arm_degrees;
+		/ /use right servo
+		rarm_servo_value = (int)arm_degrees;
 	}
 
+}
+
+void update_servos(void){
+	// Update servos closer to global variables.
+	if (TIM3->CCR2 < base_servo_value){
+		TIM3->CCR2 += INCREMENT_VALUE;
+	}
+	else if(TIM3->CCR2 > base_servo_value){
+		TIM3->CCR2 -= INCREMENT_VALUE;
+	}
+	if (TIM3->CCR3 < larm_servo_value){
+		TIM3->CCR3 += INCREMENT_VALUE;
+	}
+	else if(TIM3->CCR3 > larm_servo_value){
+		TIM3->CCR3 -= INCREMENT_VALUE;
+	}
+	if (TIM3->CCR4 < rarm_servo_value){
+		TIM3->CCR4 += INCREMENT_VALUE;
+	}
+	else if(TIM3->CCR4 > rarm_servo_value){
+		TIM3->CCR4 -= INCREMENT_VALUE;
+	}
 }
