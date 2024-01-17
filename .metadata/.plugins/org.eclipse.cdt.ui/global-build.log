@@ -1,6 +1,8 @@
-20:21:16 **** Incremental Build of configuration Debug for project ServoClock ****
+19:02:59 **** Incremental Build of configuration Debug for project ServoClock ****
 make -j7 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4=1 -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/plot_values.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4=1 -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/plot_values.d" -MT"Src/plot_values.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/plot_values.o"
+arm-none-eabi-gcc "../Src/time_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4=1 -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -I/Users/jourdanrampoldi/workspace/CMSIS/Include -I/Users/jourdanrampoldi/workspace/CMSIS/Device/ST/STM32F4xx -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/time_handler.d" -MT"Src/time_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/time_handler.o"
 arm-none-eabi-gcc -o "ServoClock.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/jourdanrampoldi/workspace/TwoArmClock/ServoClock/STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ServoClock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ServoClock.elf
  
@@ -8,7 +10,7 @@ arm-none-eabi-size   ServoClock.elf
 arm-none-eabi-objdump -h -S  ServoClock.elf  > "ServoClock.list"
 arm-none-eabi-objcopy  -O binary  ServoClock.elf  "ServoClock.bin"
    text	   data	    bss	    dec	    hex	filename
-  12156	    104	   1904	  14164	   3754	ServoClock.elf
+  13692	   1088	   1904	  16684	   412c	ServoClock.elf
 Finished building: default.size.stdout
  
 Finished building: ServoClock.bin

@@ -66,7 +66,7 @@ void draw_colon(){
 
 
 void draw_D1(int digit){
-    int x_offset = -4;
+    int x_offset = -4
 	switch(digit){
 		case 0: draw_zero(x_offset); break;
 		case 1: draw_one(x_offset); break;
@@ -81,7 +81,7 @@ void draw_D1(int digit){
 	}
 }
 void draw_D2(int digit){
-    int x_offset = -1;
+    int x_offset = -1
 	switch(digit){
 		case 0: draw_zero(x_offset); break;
 		case 1: draw_one(x_offset); break;
@@ -96,7 +96,7 @@ void draw_D2(int digit){
 	}
 }
 void draw_D3(int digit){
-    int x_offset = 4;
+    int x_offset = 4
 	switch(digit){
 		case 0: draw_zero(x_offset); break;
 		case 1: draw_one(x_offset); break;
@@ -111,7 +111,7 @@ void draw_D3(int digit){
 	}
 }
 void draw_D4(int digit){
-    int x_offset = 7;
+    int x_offset = 7
 	switch(digit){
 		case 0: draw_zero(x_offset); break;
 		case 1: draw_one(x_offset); break;
@@ -123,11 +123,6 @@ void draw_D4(int digit){
 		case 7: draw_seven(x_offset); break;
 		case 8: draw_eight(x_offset); break;
 		case 9: draw_nine(x_offset); break;
-	}
-}
-void draw_zero(int offset_x){
-	for (int i = 0; i < one_array_size; i++){
-		move_arm(zero_array[i][0] + offset_x, zero_array[i][1] + Y_OFFSET);
 	}
 }
 
