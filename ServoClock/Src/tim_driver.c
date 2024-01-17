@@ -6,8 +6,9 @@
  */
 #include "tim_driver.h"
 
-/*TIM3 DEFINITIONS*/
+/*TIM DEFINITIONS*/
 #define TIM3EN				(1U<<1)
+#define TIM4EN				(1U<<2)
 #define DIER_UIE			(1U<<0)
 #define CR1_CEN				(1U<<0)
 
@@ -30,4 +31,24 @@ void tim3_1hz_init(void){
 
 	/* Start Clock */
 	TIM3->CR1 |= CR1_CEN;
+}
+
+void tim4_init(void){
+
+	/* Configure timer to interrupt every 10 ms */
+	/* Enable Clock Access */
+	RCC->APB1ENR |= TIM4EN;
+
+	/* Timer configured to 0.1Hz */
+	TIM4->PSC = 16000;
+	TIM4->ARR = 10000;
+	TIM4->CNT = 0;
+
+	/* Enable interrupt */
+	TIM4->DIER = DIER_UIE; 
+
+	/* Enable in NVIC */
+	NVIC_EnableIRQ(TIM4_IRQn);
+
+	TIM4->CR1 |= CR1_EN;
 }
