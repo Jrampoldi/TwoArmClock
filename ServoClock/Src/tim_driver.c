@@ -39,9 +39,9 @@ void tim4_init(void){
 	/* Enable Clock Access */
 	RCC->APB1ENR |= TIM4EN;
 
-	/* Timer configured to 0.1Hz */
-	TIM4->PSC = 16000;
-	TIM4->ARR = 10000;
+	/* Timer configured to 100Hz */
+	TIM4->PSC = 1600;
+	TIM4->ARR = 100;
 	TIM4->CNT = 0;
 
 	/* Enable interrupt */
