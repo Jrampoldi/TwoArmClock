@@ -17,4 +17,7 @@ void tim3_1hz_init(void);
 // Description: Initializes tim3 to signal an interrupt 
 // at a frequency of 1Hz.
 
+void tim4_init(void);
+// Description: Initializes tim4 to signal an interrupt
+// at a rate of 10 ms.
 #endif /* TIM_DRIVER_H_ */
