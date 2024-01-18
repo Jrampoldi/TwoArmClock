@@ -865,3 +865,42 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jourd
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-16 18:59:59.448
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-01-17 19:33:26.219 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jourdanrampoldi/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jourdanrampoldi/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-17 19:33:37.229
+!MESSAGE Log4j2 initialized with config file /Users/jourdanrampoldi/workspace/TwoArmClock/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-17 19:33:56.204
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-01-17 20:01:51.674 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jourdanrampoldi/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jourdanrampoldi/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-17 20:02:01.254
+!MESSAGE Log4j2 initialized with config file /Users/jourdanrampoldi/workspace/TwoArmClock/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-17 20:02:20.558
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-01-17 20:20:27.077 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jourdanrampoldi/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jourdanrampoldi/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-17 20:20:38.434
+!MESSAGE Log4j2 initialized with config file /Users/jourdanrampoldi/workspace/TwoArmClock/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-17 20:20:57.232
+!MESSAGE Started RMI Server, listening on port 41337

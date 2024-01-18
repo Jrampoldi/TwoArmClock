@@ -26,8 +26,4 @@ void move_servo(float base_degrees, float arm_degrees, float x_value);
 // the x-value for deciding right-arm servo motor or left-arm servo  motor.
 // Will change values of servo global variables accordingly.
 
-void update_servos(void);
-// Description: if the CCR values of any servos are different than 
-// the current value, the values will be incremented closer to that
-// value;
 #endif /* PWM_HANDLER_H_ */

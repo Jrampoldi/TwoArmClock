@@ -10,7 +10,6 @@
 /* Function Declarations */
 void SystemInit(void);
 void tim3_callback(void);
-void tim4_callback(void);
 
 /* Global variables */
 volatile int seconds = 0;
@@ -33,13 +32,9 @@ void tim3_callback(void){
     if (seconds >= 60){
         //update clock
     	update_clock();
+    	printf("Clock updated\n");
         seconds = 0;
     }
-}
-
-void tim4_callback(void){
-	// update CCR values of servos
-	update_servos();
 }
 
 void TIM3_IRQHandler(){
@@ -51,14 +46,6 @@ void TIM3_IRQHandler(){
 	}
 }
 
-void TIM4_IRQHandler(){
-	//interrupt pending
-	if (TIM4->SR & SR_UIF){
-		//reset interrupt flag
-		TIM4->SR &= ~(SR_UIF);
-		tim4_callback();
-	}
-}
 void SystemInit(void)
 {
 	/* Set floating point coprosessor access mode. */

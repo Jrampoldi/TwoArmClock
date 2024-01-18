@@ -1,2 +1,3 @@
 /Users/jourdanrampoldi/workspace/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
-../Src/tim_driver.c:14:6:tim3_1hz_init	1
+../Src/tim_driver.c:15:6:tim3_1hz_init	1
+../Src/tim_driver.c:36:6:tim4_init	1

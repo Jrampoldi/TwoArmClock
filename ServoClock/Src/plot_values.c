@@ -126,6 +126,7 @@ void draw_D4(int digit){
 	}
 }
 void draw_zero(int offset_x){
+	printf("Drawing Zero:\n");
 	for (int i = 0; i < one_array_size; i++){
 		move_arm(zero_array[i][0] + offset_x, zero_array[i][1] + Y_OFFSET);
 	}
@@ -133,6 +134,7 @@ void draw_zero(int offset_x){
 
 void draw_one(int offset_x){
     //one with offsetx and offsety
+	printf("Drawing One: \n");
 	for (int i = 0; i < one_array_size; i++){
 		move_arm(one_array[i][0] + offset_x, one_array[i][1] + Y_OFFSET);
 	}
